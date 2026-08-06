@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飛炫｜品牌價值轉譯者｜喜願鳥數位文化設計 Wishbird Design</title>
+    <meta name="description" content="喜願鳥數位文化設計創辦人飛炫，提供品牌診斷、品牌識別整合、品牌官網規劃與內容設計服務。協助建築、修繕、教育與傳統產業將專業轉譯為客戶看得懂、信得過、會選擇的品牌形象。高雄品牌設計與企業品牌顧問。">
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="飛炫｜品牌價值轉譯者｜喜願鳥數位文化設計">
+    <meta property="og:description" content="把你的專業，轉譯成客戶看得懂、信得過、會選擇的品牌。提供品牌診斷、識別設計與官網體驗規劃。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wishbird-design.com">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#003D55',
+                            dark: '#0b2f39',
+                            light: '#2e5563'
+                        },
+                        gold: {
+                            DEFAULT: '#B89C6B',
+                            light: '#D6B97E',
+                            dark: '#97794d'
+                        },
+                        coral: {
+                            DEFAULT: '#C9B89A',
+                            hover: '#AFA07F',
+                            light: '#F6F0E8'
+                        },
+                        bg: {
+                            ivory: '#F5F1E8',
+                            gray: '#E6E3DE',
+                            bluegray: '#EEF2F5',
+                            card: '#FFFFFF'
+                        },
+                        txt: {
+                            main: '#24343C',
+                            muted: '#566170',
+                            light: '#7A8491'
+                        },
+                        border: '#E4E0D9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                        serif: ['Noto Serif TC', 'serif']
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -10px rgba(36, 50, 74, 0.08)',
+                        'hover': '0 20px 40px -15px rgba(36, 50, 74, 0.15)',
+                        'glow': '0 0 25px rgba(200, 155, 91, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F5F1E8;
+            color: #24343C;
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(200, 155, 91, 0.08) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(217, 119, 87, 0.06) 0px, transparent 50%),
+                              radial-gradient(at 50% 50%, rgba(36, 50, 74, 0.04) 0px, transparent 50%);
+        }
+
+        .glass-nav {
+            background: rgba(252, 250, 247, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .animated-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            bottom: 2px;
+            left: 0;
+            background-color: rgba(200, 155, 91, 0.35);
+            border-radius: 3px;
+            z-index: -1;
+            transition: transform 0.3s ease;
+        }
+
+        .custom-card {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .custom-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(36, 50, 74, 0.12);
+            border-color: #C89B5B;
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(0.8deg); }
+        }
+        .animate-float {
+            animation: float-slow 7s ease-in-out infinite;
+        }
+
+        .modal-backdrop {
+            background: rgba(24, 34, 51, 0.7);
+            backdrop-filter: blur(6px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://wishbird-design.com/#person",
+          "name": "飛炫",
+          "jobTitle": "創辦人兼設計總監",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "喜願鳥數位文化設計 Wishbird Digital Culture Design"
+          },
+          "description": "品牌價值轉譯者，專長品牌策略診斷、視覺識別整合與品牌官網規劃。"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://wishbird-design.com/#service",
+          "name": "喜願鳥數位文化設計 Wishbird Digital Culture Design",
+          "url": "https://wishbird-design.com",
+          "description": "提供品牌診斷、品牌識別設計、品牌官網製作與數位內容整合服務。",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "高雄市",
+            "addressCountry": "TW"
+          },
+          "priceRange": "$$$"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-bg-ivory text-txt-main antialiased selection:bg-gold-light selection:text-navy">
+
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-nav border-b border-border/60" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-gold group-hover:scale-105 transition-transform shadow-md">
+                    <i data-lucide="feather" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="block font-bold text-lg text-navy tracking-tight leading-tight">喜願鳥數位文化設計</span>
+                    <span class="block text-xs text-txt-light font-sans tracking-wider">WISHBIRD DESIGN · 飛炫</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-txt-muted">
+                <a href="#about" class="hover:text-navy transition-colors">關於飛炫</a>
+                <a href="#assessment" class="hover:text-coral transition-colors flex items-center"><i data-lucide="activity" class="w-3.5 h-3.5 mr-1 text-coral"></i>品牌檢測</a>
+                <a href="#problems" class="hover:text-navy transition-colors">企業痛點</a>
+                <a href="#diagnosis" class="hover:text-navy transition-colors">品牌診斷</a>
+                <a href="#services" class="hover:text-navy transition-colors">四項服務</a>
+                <a href="#transformation" class="hover:text-navy transition-colors">改善對比</a>
+                <a href="#why-us" class="hover:text-navy transition-colors">特色價值</a>
+                <a href="#portfolio" class="hover:text-navy transition-colors">案例領域</a>
+                <a href="#process" class="hover:text-navy transition-colors">合作流程</a>
+                <a href="#insights" class="hover:text-navy transition-colors">品牌觀點</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-3">
+                <button onclick="openBookingModal()" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-navy rounded-full shadow-md hover:bg-navy-light hover:shadow-lg transition-all transform hover:-translate-y-0.5 group">
+                    <span>預約品牌診斷</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+
+            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 text-navy hover:text-gold focus:outline-none focus:ring-2 focus:ring-navy rounded-lg" aria-label="打開選單">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-bg-ivory border-b border-border px-4 pt-4 pb-6 space-y-2 shadow-xl">
+            <a href="#about" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">關於飛炫</a>
+            <a href="#assessment" class="mobile-link block px-3 py-2 text-base font-semibold text-coral hover:bg-bg-gray rounded-lg">品牌線上快檢</a>
+            <a href="#problems" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">企業痛點</a>
+            <a href="#diagnosis" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">品牌診斷服務</a>
+            <a href="#services" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">四項核心服務</a>
+            <a href="#transformation" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">改善前後對比</a>
+            <a href="#why-us" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">特色價值</a>
+            <a href="#portfolio" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">案例與領域</a>
+            <a href="#process" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">合作流程</a>
+            <a href="#insights" class="mobile-link block px-3 py-2 text-base font-medium text-txt-main hover:bg-bg-gray rounded-lg">品牌觀點</a>
+            <div class="pt-2">
+                <button onclick="openBookingModal(); document.getElementById('mobile-menu').classList.add('hidden')" class="w-full text-center px-5 py-3 text-sm font-medium text-white bg-navy rounded-full shadow-md">
+                    預約品牌診斷
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <section id="hero" class="relative min-h-[88vh] flex items-center py-16 lg:py-24 bg-mesh overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-7 text-left">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-navy/5 border border-navy/10 text-xs font-medium text-navy tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                            <span>Brand Value Translator · Strategy & Design Consultant</span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm font-semibold tracking-wider text-gold-dark uppercase">
+                            品牌價值轉譯者 ／ 喜願鳥數位文化設計創辦人 飛炫
+                        </div>
+
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-navy leading-tight lg:leading-snug">
+                            把你的專業，轉譯成客戶<br class="hidden sm:inline"/>
+                            <span class="animated-underline text-navy">看得懂</span>、
+                            <span class="animated-underline text-navy">信得過</span>、
+                            <span class="animated-underline text-navy">會選擇</span>的品牌。
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-txt-muted max-w-2xl font-normal leading-relaxed">
+                            喜願鳥協助建築、修繕、教育、傳統產業與專業服務單位，將企業的服務、理念與專業能力，整合成清楚、有辨識度、能建立信任並支持商業成長的品牌形象。
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+                            <button onclick="openBookingModal()" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-navy rounded-full shadow-lg hover:bg-coral hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-center group">
+                                <span>預約品牌診斷</span>
+                                <i data-lucide="calendar" class="w-5 h-5 ml-2 group-hover:scale-110 transition-transform"></i>
+                            </button>
+                            <a href="#assessment" class="inline-flex items-center justify-center px-7 py-4 text-base font-medium text-navy bg-white border border-border rounded-full hover:border-gold hover:bg-bg-gray transition-all text-center shadow-sm">
+                                <i data-lucide="sparkles" class="w-4 h-4 mr-2 text-gold"></i>
+                                3分鐘線上品牌檢測
+                            </a>
+                        </div>
+
+                        <div class="pt-2 text-xs text-txt-light flex items-center space-x-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-gold"></i>
+                            <a href="#about" class="hover:underline hover:text-navy transition-colors">了解喜願鳥如何協助品牌成長 ➔</a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative flex justify-center items-center">
+                        <div class="relative w-full max-w-md aspect-square rounded-3xl bg-white/80 p-6 border border-border shadow-soft backdrop-blur-sm animate-float">
+                            
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-32 h-32 rounded-full bg-navy text-white flex flex-col items-center justify-center p-4 text-center shadow-glow border-4 border-white/60">
+                                    <i data-lucide="compass" class="w-8 h-8 text-gold mb-1"></i>
+                                    <span class="text-xs font-bold tracking-wider">品牌價值核心</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute top-4 left-4 bg-white p-3.5 rounded-xl border border-border shadow-sm flex items-center space-x-3 w-40 hover:scale-105 transition-transform">
+                                <div class="p-2 rounded-lg bg-gold/10 text-gold-dark">
+                                    <i data-lucide="target" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-navy">品牌診斷定位</p>
+                                    <p class="text-[10px] text-txt-light">Strategy</p>
+                                </div>
+                            </div>
+
+                            <div class="absolute top-8 right-2 bg-white p-3.5 rounded-xl border border-border shadow-sm flex items-center space-x-3 w-44 hover:scale-105 transition-transform">
+                                <div class="p-2 rounded-lg bg-coral/10 text-coral">
+                                    <i data-lucide="palette" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-navy">識別形象整合</p>
+                                    <p class="text-[10px] text-txt-light">Identity Design</p>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-8 left-2 bg-white p-3.5 rounded-xl border border-border shadow-sm flex items-center space-x-3 w-44 hover:scale-105 transition-transform">
+                                <div class="p-2 rounded-lg bg-navy/10 text-navy">
+                                    <i data-lucide="layout" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-navy">官網體驗與內容</p>
+                                    <p class="text-[10px] text-txt-light">UX/UI & Copy</p>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-4 right-4 bg-white p-3.5 rounded-xl border border-border shadow-sm flex items-center space-x-3 w-40 hover:scale-105 transition-transform">
+                                <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-600">
+                                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-navy">商業信任轉化</p>
+                                    <p class="text-[10px] text-txt-light">Growth</p>
+                                </div>
+                            </div>
+
+                            <svg class="absolute inset-0 w-full h-full pointer-events-none stroke-border/80" fill="none">
+                                <line x1="20%" y1="20%" x2="50%" y2="50%" stroke-dasharray="4 4" />
+                                <line x1="80%" y1="20%" x2="50%" y2="50%" stroke-dasharray="4 4" />
+                                <line x1="20%" y1="80%" x2="50%" y2="50%" stroke-dasharray="4 4" />
+                                <line x1="80%" y1="80%" x2="50%" y2="50%" stroke-dasharray="4 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-border bg-white py-7">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-[11px] font-semibold tracking-widest text-txt-light uppercase mb-5">喜願鳥協助企業進行品牌升級的五個維度</p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                    <div class="p-3 rounded-xl bg-bg-ivory/60 flex items-center justify-center space-x-2 text-txt-muted text-xs sm:text-sm font-semibold">
+                        <i data-lucide="compass" class="w-4 h-4 text-gold"></i>
+                        <span>品牌策略定位</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-bg-ivory/60 flex items-center justify-center space-x-2 text-txt-muted text-xs sm:text-sm font-semibold">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-gold"></i>
+                        <span>視覺識別系統</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-bg-ivory/60 flex items-center justify-center space-x-2 text-txt-muted text-xs sm:text-sm font-semibold">
+                        <i data-lucide="monitor" class="w-4 h-4 text-gold"></i>
+                        <span>品牌數位官網</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-bg-ivory/60 flex items-center justify-center space-x-2 text-txt-muted text-xs sm:text-sm font-semibold">
+                        <i data-lucide="file-text" class="w-4 h-4 text-gold"></i>
+                        <span>行銷內容轉譯</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-bg-ivory/60 flex items-center justify-center space-x-2 text-txt-muted text-xs sm:text-sm font-semibold col-span-2 md:col-span-1">
+                        <i data-lucide="briefcase" class="w-4 h-4 text-gold"></i>
+                        <span>跨產業實戰經驗</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment" class="py-16 bg-navy/5 border-b border-border">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl p-6 sm:p-10 border border-border shadow-soft">
+                    <div class="text-center space-y-3 mb-8">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-coral/10 text-coral text-xs font-bold">
+                            <i data-lucide="activity" class="w-3.5 h-3.5 mr-1.5"></i>
+                            3分鐘線上品牌快檢
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy">評估您的企業品牌健康度</h2>
+                        <p class="text-sm text-txt-muted">請勾選貴公司目前面臨的情況，即時計算品牌溝通落差分數並獲得初步診斷建議：</p>
+                    </div>
+
+                    <div class="space-y-3" id="quiz-options">
+                        <label class="flex items-start p-4 rounded-xl border border-border hover:bg-bg-ivory cursor-pointer transition-colors group">
+                            <input type="checkbox" value="25" class="quiz-check mt-1 w-4 h-4 text-navy rounded border-gray-300 focus:ring-navy" onchange="calculateBrandScore()">
+                            <span class="ml-3 text-sm text-txt-main font-medium group-hover:text-navy">客戶聽完簡報或看過網站後，依然覺得「價格偏高」或跟同業差不多</span>
+                        </label>
+                        <label class="flex items-start p-4 rounded-xl border border-border hover:bg-bg-ivory cursor-pointer transition-colors group">
+                            <input type="checkbox" value="25" class="quiz-check mt-1 w-4 h-4 text-navy rounded border-gray-300 focus:ring-navy" onchange="calculateBrandScore()">
+                            <span class="ml-3 text-sm text-txt-main font-medium group-hover:text-navy">公司 Logo、名片、官網與社群圖片風格零散，看起來像不同公司</span>
+                        </label>
+                        <label class="flex items-start p-4 rounded-xl border border-border hover:bg-bg-ivory cursor-pointer transition-colors group">
+                            <input type="checkbox" value="25" class="quiz-check mt-1 w-4 h-4 text-navy rounded border-gray-300 focus:ring-navy" onchange="calculateBrandScore()">
+                            <span class="ml-3 text-sm text-txt-main font-medium group-hover:text-navy">官網有很多資料與照片，但訪客進來後很少主動填表詢問</span>
+                        </label>
+                        <label class="flex items-start p-4 rounded-xl border border-border hover:bg-bg-ivory cursor-pointer transition-colors group">
+                            <input type="checkbox" value="25" class="quiz-check mt-1 w-4 h-4 text-navy rounded border-gray-300 focus:ring-navy" onchange="calculateBrandScore()">
+                            <span class="ml-3 text-sm text-txt-main font-medium group-hover:text-navy">業務團隊對外介紹公司服務時，每個人說法不一致，缺乏標準話術與簡報</span>
+                        </label>
+                    </div>
+
+                    <div id="quiz-result" class="mt-8 p-6 rounded-2xl bg-bg-ivory border border-gold/40 text-center space-y-3">
+                        <p class="text-xs font-semibold text-txt-light uppercase tracking-wider">當前品牌溝通落差評估</p>
+                        <div class="text-2xl font-bold text-navy" id="score-text">請選擇符合的選項</div>
+                        <p class="text-xs sm:text-sm text-txt-muted max-w-lg mx-auto" id="score-advice">
+                            透過線上快檢，協助您釐清是否需要透過正式「品牌診斷」來重新整理企業定位與溝通架構。
+                        </p>
+                        <div class="pt-2">
+                            <button onclick="openBookingModal()" class="px-6 py-2.5 text-xs font-bold text-white bg-navy rounded-full hover:bg-coral transition-colors">
+                                帶入此評估預約 1對1 品牌診斷 ➔
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-bg-ivory relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-sm rounded-2xl bg-white p-4 border border-border shadow-soft">
+                            <div class="aspect-[4/5] rounded-xl bg-navy/5 flex flex-col items-center justify-center border border-dashed border-navy/20 relative overflow-hidden group">
+                                <div class="w-20 h-20 rounded-full bg-navy/10 flex items-center justify-center text-navy mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="user-check" class="w-10 h-10"></i>
+                                </div>
+                                <span class="text-sm font-bold text-navy">創辦人／設計總監 飛炫</span>
+                                <span class="text-xs text-txt-light mt-1">個人形象照片預留區</span>
+                            </div>
+                            <div class="absolute -bottom-3 -right-3 bg-navy text-gold px-4 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                品牌價值轉譯者
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-full bg-gold/10 text-gold-dark text-xs font-semibold">
+                            ABOUT FLYING & WISHBIRD
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy">
+                            「我不只是替品牌做設計，而是協助企業把價值說清楚。」
+                        </h2>
+                        <p class="text-txt-muted leading-relaxed text-sm sm:text-base">
+                            飛炫是喜願鳥數位文化設計的創辦人與設計總監，具備視覺傳達設計背景，長期投入品牌識別、品牌官網、內容設計與數位整合服務。
+                        </p>
+                        <p class="text-txt-muted leading-relaxed text-sm sm:text-base">
+                            她擅長站在企業與客戶之間，理解企業真正想傳達的價值，再將複雜的專業、服務與理念，整理成市場容易理解與信任的品牌語言。
+                        </p>
+                        <p class="text-txt-muted leading-relaxed text-sm sm:text-base">
+                            相較於只處理單一設計項目，飛炫更重視品牌整體的一致性與長期累積——包含品牌定位、識別、網站、社群、簡報與行銷素材之間的連結，讓品牌成為企業最強大的信任資產。
+                        </p>
+
+                        <div class="p-5 rounded-xl bg-white border border-border space-y-2 shadow-sm">
+                            <h3 class="text-base font-bold text-navy flex items-center">
+                                <i data-lucide="quote" class="w-4 h-4 text-gold mr-2"></i>
+                                品牌核心信念
+                            </h3>
+                            <p class="text-xs sm:text-sm text-txt-muted italic leading-relaxed">
+                                「不是你的品牌沒有價值，而是價值還沒有被清楚地看見。」喜願鳥的工作，是陪你重新整理：我們是誰、服務誰、解決什麼問題、以及客戶為什麼非你不可。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="problems" class="py-20 bg-bg-gray border-y border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-coral uppercase">Client Challenges</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">你是否正面臨這些狀況？</h2>
+                    <p class="text-txt-muted text-sm sm:text-base">
+                        企業發展到一定階段後，最常出現的不是能力不足，而是「溝通落差」阻礙了商業成長。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-border shadow-sm custom-card space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-coral/10 text-coral flex items-center justify-center">
+                            <i data-lucide="message-square-off" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-lg">專業無法被快速理解</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                            公司擁有堅實的技術與服務，但對外說明時過於艱澀難懂，潛在客戶聽不懂、感受不到價值。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border shadow-sm custom-card space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold-dark flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-lg">品牌形象與規模不符</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                            公司已有一定規模與專業，但 Logo、網站與簡報看起來老舊散亂，難以建立高端信任感。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border shadow-sm custom-card space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy/10 text-navy flex items-center justify-center">
+                            <i data-lucide="globe" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-lg">官網流量無法有效轉換</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                            網站有訪客卻沒有人詢問，因為內容像企業資料堆放區，缺乏清楚的信任證明與轉換引導。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border shadow-sm custom-card space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy/10 text-navy flex items-center justify-center">
+                            <i data-lucide="tag" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-lg">客戶往往只比較價格</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                            因為市場無法從視覺與內容辨識出品質差異，最終導致陷入無止盡的低價競爭與被動比價。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border shadow-sm custom-card space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-coral/10 text-coral flex items-center justify-center">
+                            <i data-lucide="file-warning" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-lg">行銷素材無法累積資產</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                            每次有新活動都重新設計，長期累積大量零散素材，缺乏統一品牌規範與延續性。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border shadow-sm custom-card space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold-dark flex items-center justify-center">
+                            <i data-lucide="users" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-lg">內部溝通說法不一致</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                            團隊成員對外的品牌介紹與服務重點各有版本，難以形成強大且一致的商業影響力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnosis" class="py-20 bg-navy text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold">
+                            <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                            <span>BRAND DIAGNOSIS SERVICE</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
+                            「品牌不是看起來不夠漂亮，而是市場還沒有清楚感受到你的價值。」
+                        </h2>
+                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                            品牌診斷諮詢將從企業目前的定位、視覺、網站、社群與行銷素材出發，找出真正影響品牌辨識度、信任感與商業轉換的關鍵問題。
+                        </p>
+                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                            不只是告訴你哪裡需要修改，而是依照企業資源、影響程度與執行難度，提出清楚的改善順序與下一步行動計畫。
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-200">
+                                <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                <span>品牌定位與市場差異盤點</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-200">
+                                <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                <span>視覺識別系統現況健康度</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-200">
+                                <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                <span>官網內容與 UX 瀏覽體驗</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-200">
+                                <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                <span>顧客全接觸點溝通順暢度</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                            <button onclick="openBookingModal()" class="px-8 py-4 bg-gold hover:bg-gold-light text-navy font-bold rounded-full transition-all shadow-lg text-center text-sm">
+                                預約品牌診斷諮詢
+                            </button>
+                            <span class="text-xs text-gray-400">先找出真正問題，再決定下一步該投入什麼。</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-navy-dark p-7 rounded-2xl border border-navy-light space-y-5 shadow-2xl">
+                        <h3 class="text-lg font-bold text-gold border-b border-navy-light pb-3">適合預約情況盤點</h3>
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+                            <li class="flex items-start">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-coral mr-2 mt-0.5 shrink-0"></i>
+                                不確定品牌問題究竟出在哪裡
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-coral mr-2 mt-0.5 shrink-0"></i>
+                                正準備進行品牌升級或官網重構改版
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-coral mr-2 mt-0.5 shrink-0"></i>
+                                服務內容改變，需要重新整理對外說法
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-coral mr-2 mt-0.5 shrink-0"></i>
+                                行銷持續投入，但市場辨識度依然不高
+                            </li>
+                        </ul>
+                        <div class="p-4 rounded-xl bg-navy text-xs text-gold/90 border border-gold/20 leading-relaxed">
+                            💡 診斷後您將獲得：優先改善順序藍圖 + 品牌內容調整建議 + 可執行的行動計畫。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-bg-ivory">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-gold-dark uppercase">OUR CORE SERVICES</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">喜願鳥四項核心品牌整合服務</h2>
+                    <p class="text-txt-muted text-sm sm:text-base">
+                        從策略診斷、視覺識別、數位官網到長期內容支援，提供完整的一站式品牌建構方案。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center font-bold text-xl">
+                                01
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy">品牌診斷與策略規劃</h3>
+                            <p class="text-xs font-bold text-gold-dark uppercase tracking-wider">品牌診斷諮詢</p>
+                            <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                                找出品牌真正影響辨識度、信任感與商業轉換的關鍵問題，讓企業知道接下來應該先做什麼，而不是持續零散投入。
+                            </p>
+                            <ul class="space-y-2 text-xs text-txt-muted pt-2 border-t border-border">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>品牌定位與核心價值盤點</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>顧客接觸點溝通落差分析</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>明確改善優先順序藍圖</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal()" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-navy rounded-full hover:bg-coral transition-colors w-full">
+                            預約品牌診斷
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center font-bold text-xl">
+                                02
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy">品牌識別與形象整合</h3>
+                            <p class="text-xs font-bold text-gold-dark uppercase tracking-wider">品牌識別與整體形象設計</p>
+                            <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                                將企業定位、價值與個性，轉化為清楚、一致、有辨識度的視覺語言，降低長期行銷與設計溝通成本。
+                            </p>
+                            <ul class="space-y-2 text-xs text-txt-muted pt-2 border-t border-border">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>Logo、標準字與色彩系統</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>品牌輔助圖形與視覺規範</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>名片、簡報與實體應用規範</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal('品牌識別與形象整合')" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-navy bg-bg-gray hover:bg-navy hover:text-white transition-colors rounded-full w-full">
+                            了解品牌識別服務
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center font-bold text-xl">
+                                03
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy">品牌官網與數位體驗</h3>
+                            <p class="text-xs font-bold text-gold-dark uppercase tracking-wider">品牌官網規劃與設計</p>
+                            <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                                不只是做漂亮的網站，而是將企業服務與信任證明整理成客戶容易理解與採取行動的數位體驗。
+                            </p>
+                            <ul class="space-y-2 text-xs text-txt-muted pt-2 border-t border-border">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>資訊架構與瀏覽路徑 UX 規劃</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>品牌網頁視覺與文案整理</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>RWD 響應式與基礎 SEO 架構</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal('品牌官網規劃與設計')" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-navy bg-bg-gray hover:bg-navy hover:text-white transition-colors rounded-full w-full">
+                            查看官網設計服務
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy text-gold flex items-center justify-center font-bold text-xl">
+                                04
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy">品牌內容與行銷素材整合</h3>
+                            <p class="text-xs font-bold text-gold-dark uppercase tracking-wider">品牌內容與長期視覺支援</p>
+                            <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">
+                                協助企業將品牌策略持續落落在社群、文章與行銷素材中，建立可持續累積的品牌資產系統。
+                            </p>
+                            <ul class="space-y-2 text-xs text-txt-muted pt-2 border-t border-border">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>社群視覺與圖文模板規範</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>提案簡報與銷售頁視覺設計</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-gold mr-2"></i>AI 輔助內容與設計流程賦能</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal('品牌內容與長期視覺支援')" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-navy bg-bg-gray hover:bg-navy hover:text-white transition-colors rounded-full w-full">
+                            了解長期品牌支援
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="transformation" class="py-20 bg-bg-gray border-y border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-coral uppercase">BRAND TRANSFORMATION</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">品牌升級前後的實質改變</h2>
+                    <p class="text-txt-muted text-sm sm:text-base">喜願鳥協助企業完成從內而外的溝通重構</p>
+                </div>
+
+                <div class="space-y-4 max-w-4xl mx-auto">
+                    <div class="bg-white p-5 rounded-xl border border-border grid grid-cols-1 md:grid-cols-2 gap-4 items-center shadow-sm">
+                        <div class="flex items-center space-x-3 text-txt-muted">
+                            <span class="px-2.5 py-1 bg-red-100 text-red-600 font-bold text-xs rounded">BEFORE</span>
+                            <span class="text-xs sm:text-sm">訊息零散，服務講不清楚</span>
+                        </div>
+                        <div class="flex items-center space-x-3 font-semibold border-t md:border-t-0 md:border-l border-border pt-3 md:pt-0 md:pl-6">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 font-bold text-xs rounded">AFTER</span>
+                            <span class="text-xs sm:text-sm text-emerald-800">定位清楚，精準擊中客戶需求</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-border grid grid-cols-1 md:grid-cols-2 gap-4 items-center shadow-sm">
+                        <div class="flex items-center space-x-3 text-txt-muted">
+                            <span class="px-2.5 py-1 bg-red-100 text-red-600 font-bold text-xs rounded">BEFORE</span>
+                            <span class="text-xs sm:text-sm">視覺混亂，各管道風格獨立</span>
+                        </div>
+                        <div class="flex items-center space-x-3 font-semibold border-t md:border-t-0 md:border-l border-border pt-3 md:pt-0 md:pl-6">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 font-bold text-xs rounded">AFTER</span>
+                            <span class="text-xs sm:text-sm text-emerald-800">形象一致，展現頂尖專業質感</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-border grid grid-cols-1 md:grid-cols-2 gap-4 items-center shadow-sm">
+                        <div class="flex items-center space-x-3 text-txt-muted">
+                            <span class="px-2.5 py-1 bg-red-100 text-red-600 font-bold text-xs rounded">BEFORE</span>
+                            <span class="text-xs sm:text-sm">官網難懂，僅作為資料庫</span>
+                        </div>
+                        <div class="flex items-center space-x-3 font-semibold border-t md:border-t-0 md:border-l border-border pt-3 md:pt-0 md:pl-6">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 font-bold text-xs rounded">AFTER</span>
+                            <span class="text-xs sm:text-sm text-emerald-800">價值明確，有效引導商業詢問</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-border grid grid-cols-1 md:grid-cols-2 gap-4 items-center shadow-sm">
+                        <div class="flex items-center space-x-3 text-txt-muted">
+                            <span class="px-2.5 py-1 bg-red-100 text-red-600 font-bold text-xs rounded">BEFORE</span>
+                            <span class="text-xs sm:text-sm">陷入價格戰，被動被比價</span>
+                        </div>
+                        <div class="flex items-center space-x-3 font-semibold border-t md:border-t-0 md:border-l border-border pt-3 md:pt-0 md:pl-6">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 font-bold text-xs rounded">AFTER</span>
+                            <span class="text-xs sm:text-sm text-emerald-800">建立不可替代性，提升品牌溢價</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-border grid grid-cols-1 md:grid-cols-2 gap-4 items-center shadow-sm">
+                        <div class="flex items-center space-x-3 text-txt-muted">
+                            <span class="px-2.5 py-1 bg-red-100 text-red-600 font-bold text-xs rounded">BEFORE</span>
+                            <span class="text-xs sm:text-sm">單次製作，無法累積行銷效果</span>
+                        </div>
+                        <div class="flex items-center space-x-3 font-semibold border-t md:border-t-0 md:border-l border-border pt-3 md:pt-0 md:pl-6">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 font-bold text-xs rounded">AFTER</span>
+                            <span class="text-xs sm:text-sm text-emerald-800">持續累積，形成長期品牌資產</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="py-20 bg-bg-ivory">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-gold-dark uppercase">WHY CHOOSE FLYING</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">為什麼值得選擇喜願鳥合作？</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="text-gold font-bold text-lg">01</div>
+                        <h3 class="font-bold text-navy text-lg">從商業目的出發</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">不是先決定要做 Logo 或網站，而是先理解企業目前的發展階段與商業目標。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="text-gold font-bold text-lg">02</div>
+                        <h3 class="font-bold text-navy text-lg">把複雜專業說清楚</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">擅長將艱澀、零散或抽象的服務內容，整理成市場與顧客看得懂的語言。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="text-gold font-bold text-lg">03</div>
+                        <h3 class="font-bold text-navy text-lg">策略與設計同步思考</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">避免策略顧問與設計執行之間的溝通斷層，從定位到視覺呈現一氣呵成。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="text-gold font-bold text-lg">04</div>
+                        <h3 class="font-bold text-navy text-lg">重視品牌的實際應用</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">不只好看，更務實考量官網、社群、簡報與實體行銷素材的落地可行性。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="text-gold font-bold text-lg">05</div>
+                        <h3 class="font-bold text-navy text-lg">協助建立內部品牌能力</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">賦能內部團隊理解品牌判斷邏輯，建立未來能持續管理與維護的原則。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="text-gold font-bold text-lg">06</div>
+                        <h3 class="font-bold text-navy text-lg">美感與數位能力兼具</h3>
+                        <p class="text-xs sm:text-sm text-txt-muted leading-relaxed">整合識別設計、網站開發、SEO與數位行銷工具，為企業打造完整體驗。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20 bg-bg-gray border-t border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-gold-dark uppercase">EXPERIENCE & PORTFOLIO</span>
+                        <h2 class="text-3xl font-serif font-bold text-navy mt-2">服務產業與專案類型</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-xs text-txt-light bg-white px-3.5 py-1.5 rounded-full border border-border inline-block">
+                        ℹ️ 尊重客戶隱私，完整作品案例整理中
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl border border-border overflow-hidden custom-card flex flex-col justify-between">
+                        <div class="aspect-video bg-navy/5 flex flex-col items-center justify-center p-6 border-b border-border text-center relative">
+                            <i data-lucide="building-2" class="w-12 h-12 text-navy/30 mb-2"></i>
+                            <span class="text-xs font-semibold text-navy">建設公司品牌與行銷視覺</span>
+                            <span class="text-[10px] text-txt-light">Mockup Placeholder</span>
+                            <span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-navy text-white text-[10px]">建築與建設</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-bold text-navy text-lg">建設品牌形象整合與推案視覺</h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                針對建案特色重塑品牌語言，提升市場信任度與行銷質感。
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-border text-xs text-txt-light">
+                                <span>項目：品牌識別 / 官網 / 行銷素材</span>
+                                <span class="text-gold font-semibold">案例整理中</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-border overflow-hidden custom-card flex flex-col justify-between">
+                        <div class="aspect-video bg-navy/5 flex flex-col items-center justify-center p-6 border-b border-border text-center relative">
+                            <i data-lucide="wrench" class="w-12 h-12 text-navy/30 mb-2"></i>
+                            <span class="text-xs font-semibold text-navy">修繕工程企業識別與官網</span>
+                            <span class="text-[10px] text-txt-light">Mockup Placeholder</span>
+                            <span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-navy text-white text-[10px]">修繕與工程</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-bold text-navy text-lg">空間工程品牌化與數位轉型</h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                將工程專業技術轉化為直覺、可信任的官網服務流程。
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-border text-xs text-txt-light">
+                                <span>項目：品牌診斷 / 官網設計</span>
+                                <span class="text-gold font-semibold">案例整理中</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-border overflow-hidden custom-card flex flex-col justify-between">
+                        <div class="aspect-video bg-navy/5 flex flex-col items-center justify-center p-6 border-b border-border text-center relative">
+                            <i data-lucide="graduation-cap" class="w-12 h-12 text-navy/30 mb-2"></i>
+                            <span class="text-xs font-semibold text-navy">教育與專業機構招生視覺</span>
+                            <span class="text-[10px] text-txt-light">Mockup Placeholder</span>
+                            <span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-navy text-white text-[10px]">教育與培訓</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-bold text-navy text-lg">專業學術與課程招生品牌整合</h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                梳理課程價值重點，重構招生簡報與社群推廣素材。
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-border text-xs text-txt-light">
+                                <span>項目：內容策略 / 視覺設計</span>
+                                <span class="text-gold font-semibold">案例整理中</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-20 bg-bg-ivory">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-gold-dark uppercase">HOW WE WORK</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">五步驟合作流程</h2>
+                    <p class="text-txt-muted text-sm sm:text-base">清晰透明的合作機制，陪伴企業穩健推進品牌升級</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-navy text-gold font-bold text-xs flex items-center justify-center">1</div>
+                        <h3 class="font-bold text-navy text-base">初步了解</h3>
+                        <p class="text-xs text-txt-muted leading-relaxed">理解企業現況、服務內容、發展階段與主要需求痛點。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gold/40 shadow-sm space-y-3">
+                        <div class="w-8 h-8 rounded-full bg-gold text-navy font-bold text-xs flex items-center justify-center">2</div>
+                        <h3 class="font-bold text-navy text-base">品牌診斷</h3>
+                        <p class="text-xs text-txt-muted leading-relaxed">盤點定位、視覺、官網、內容與顧客接觸點溝通落差。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-navy text-gold font-bold text-xs flex items-center justify-center">3</div>
+                        <h3 class="font-bold text-navy text-base">策略確認</h3>
+                        <p class="text-xs text-txt-muted leading-relaxed">確認品牌溝通主軸、改善優先順序與執行範圍目標。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-navy text-gold font-bold text-xs flex items-center justify-center">4</div>
+                        <h3 class="font-bold text-navy text-base">設計與製作</h3>
+                        <p class="text-xs text-txt-muted leading-relaxed">進行品牌識別、官網、內容或行銷素材之實作發展。</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-border space-y-3 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-navy text-gold font-bold text-xs flex items-center justify-center">5</div>
+                        <h3 class="font-bold text-navy text-base">應用與優化</h3>
+                        <p class="text-xs text-txt-muted leading-relaxed">協助落實在實際場景，並依據回饋與發展持續調整。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" class="py-20 bg-bg-gray border-t border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-coral uppercase">BRAND INSIGHTS</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">品牌策略與溝通觀點</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="bg-white p-6 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="text-[10px] font-bold text-gold-dark uppercase tracking-wider">品牌識別</span>
+                            <h3 class="font-bold text-navy text-base hover:text-coral transition-colors cursor-pointer">
+                                品牌識別做完了，為什麼品牌看起來還是不一致？
+                            </h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                問題通常出在缺乏應用場景範本與溝通邏輯，讓規範成為只放在雲端硬碟的檔案...
+                            </p>
+                        </div>
+                        <button onclick="openArticleModal('品牌識別做完了，為什麼品牌看起來還是不一致？')" class="text-xs text-gold font-semibold flex items-center text-left">
+                            閱讀專欄觀點 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                        </button>
+                    </article>
+
+                    <article class="bg-white p-6 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="text-[10px] font-bold text-gold-dark uppercase tracking-wider">商業轉化</span>
+                            <h3 class="font-bold text-navy text-base hover:text-coral transition-colors cursor-pointer">
+                                客戶只會比較價格，可能不是價格的問題
+                            </h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                當市場無法從你的視覺與文案感受到差異，價格就成為唯一可比較的規格指標...
+                            </p>
+                        </div>
+                        <button onclick="openArticleModal('客戶只會比較價格，可能不是價格的問題')" class="text-xs text-gold font-semibold flex items-center text-left">
+                            閱讀專欄觀點 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                        </button>
+                    </article>
+
+                    <article class="bg-white p-6 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="text-[10px] font-bold text-gold-dark uppercase tracking-wider">官網體驗</span>
+                            <h3 class="font-bold text-navy text-base hover:text-coral transition-colors cursor-pointer">
+                                企業官網不是作品展示，而是信任設計
+                            </h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                如何將看似艱澀的專業服務，轉化為客戶看一眼就能懂並主動詢問的瀏覽流程...
+                            </p>
+                        </div>
+                        <button onclick="openArticleModal('企業官網不是作品展示，而是信任設計')" class="text-xs text-gold font-semibold flex items-center text-left">
+                            閱讀專欄觀點 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                        </button>
+                    </article>
+
+                    <article class="bg-white p-6 rounded-2xl border border-border custom-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="text-[10px] font-bold text-gold-dark uppercase tracking-wider">品牌升級</span>
+                            <h3 class="font-bold text-navy text-base hover:text-coral transition-colors cursor-pointer">
+                                品牌升級前，應該先做設計還是先做診斷？
+                            </h3>
+                            <p class="text-xs text-txt-muted leading-relaxed">
+                                盲目重新設計 Logo 常常治標不治本，先釐清瓶頸才能把行銷預算效益最大化...
+                            </p>
+                        </div>
+                        <button onclick="openArticleModal('品牌升級前，應該先做設計還是先做診斷？')" class="text-xs text-gold font-semibold flex items-center text-left">
+                            閱讀專欄觀點 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-section" class="py-24 bg-navy text-white relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>START YOUR BRAND TRANSFORMATION</span>
+                </div>
+                
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight">
+                    預約「品牌診斷諮詢」<br/>
+                    把你的專業，轉譯成市場聽得懂的價值。
+                </h2>
+
+                <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                    先找出真正影響信任感與轉換率的問題，再決定下一步該投入什麼。我們將提供具體的改善順序與行動計畫。
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="openBookingModal()" class="px-10 py-5 bg-coral hover:bg-coral-hover text-white text-lg font-bold rounded-full shadow-2xl transition-all transform hover:-translate-y-1 inline-flex items-center group">
+                        <span>線上預約品牌診斷</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <p class="text-xs text-gray-400">預約成功後，飛炫將於 2 個工作天內主動與您聯繫確認診斷細節。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-navy-dark text-gray-400 py-16 border-t border-navy-light/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-navy-light/40">
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-navy font-bold">
+                            <i data-lucide="feather" class="w-4 h-4"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg">喜願鳥數位文化設計</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+                        Wishbird Digital Culture Design<br/>
+                        核心定位：「品牌價值轉譯者」<br/>
+                        協助企業將專業轉譯為客戶看得懂、信得過、會選擇的品牌形象與數位體驗。
+                    </p>
+                    <p class="text-xs text-gold">工作室地點：台灣 高雄市</p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">快速導覽</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-gold transition-colors">關於飛炫</a></li>
+                        <li><a href="#assessment" class="hover:text-gold transition-colors">線上快檢</a></li>
+                        <li><a href="#problems" class="hover:text-gold transition-colors">企業痛點</a></li>
+                        <li><a href="#diagnosis" class="hover:text-gold transition-colors">品牌診斷</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">品牌服務</a></li>
+                        <li><a href="#portfolio" class="hover:text-gold transition-colors">案例領域</a></li>
+                        <li><a href="#process" class="hover:text-gold transition-colors">合作流程</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">聯絡與諮詢</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li>電子信箱：contact@wishbird-design.com</li>
+                        <li>工作室地區：台灣 高雄市</li>
+                        <li>諮詢方式：採線上預約品牌診斷進行</li>
+                    </ul>
+                    <div class="flex space-x-3 pt-2 text-gray-300">
+                        <a href="javascript:void(0)" onclick="openBookingModal()" aria-label="Facebook" class="hover:text-gold"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="javascript:void(0)" onclick="openBookingModal()" aria-label="Instagram" class="hover:text-gold"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="javascript:void(0)" onclick="openBookingModal()" aria-label="LinkedIn" class="hover:text-gold"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <p>© 2026 Wishbird Digital Culture Design. All rights reserved.</p>
+                <p>Designed with Care & Strategy by Flying 飛炫</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" type="button" aria-label="回到頁首" class="fixed bottom-6 right-6 p-3 bg-navy text-gold rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-gold hover:text-navy focus:outline-none z-30">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Booking Modal Backdrop -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-border transform transition-all my-8">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-txt-light hover:text-navy p-1 rounded-full hover:bg-bg-gray transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div id="modal-form-content">
+                <div class="space-y-2 mb-6">
+                    <span class="text-xs font-bold text-coral uppercase tracking-wider">BOOKING DIAGNOSIS</span>
+                    <h3 class="text-2xl font-serif font-bold text-navy">預約 1對1 品牌診斷諮詢</h3>
+                    <p class="text-xs text-txt-muted">請填寫基本資料，我們將於 2 個工作天內聯繫確認預約細節。</p>
+                </div>
+
+                <form id="diagnosis-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-navy mb-1">您的姓名 / 稱呼 *</label>
+                        <input type="text" required placeholder="例如：張經理 / 飛炫" class="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold bg-bg-ivory/50">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-navy mb-1">寶號 / 企業名稱 *</label>
+                        <input type="text" required placeholder="例如：喜願鳥建設 / 飛炫創藝" class="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold bg-bg-ivory/50">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-navy mb-1">聯絡電話 *</label>
+                            <input type="tel" required placeholder="0912-345-678" class="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold bg-bg-ivory/50">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy mb-1">電子信箱 *</label>
+                            <input type="email" required placeholder="service@company.com" class="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold bg-bg-ivory/50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-navy mb-1">感興趣的服務項目</label>
+                        <select id="selected-service-select" class="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold bg-bg-ivory/50 text-txt-main">
+                            <option value="品牌診斷諮詢">品牌診斷諮詢（推薦入場券）</option>
+                            <option value="品牌識別與形象整合">品牌識別與形象整合</option>
+                            <option value="品牌官網規劃與設計">品牌官網規劃與設計</option>
+                            <option value="品牌內容與長期視覺支援">品牌內容與長期視覺支援</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-navy mb-1">簡述目前最希望改善的品牌狀況</label>
+                        <textarea rows="3" placeholder="例如：網站內容太難懂、視覺看起來老舊、客戶常比價..." class="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold bg-bg-ivory/50"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full py-4 bg-navy hover:bg-coral text-white font-bold rounded-xl transition-colors text-sm shadow-md">
+                            確認送出預約申請
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success State -->
+            <div id="modal-success-content" class="hidden text-center py-8 space-y-4">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="check-circle" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-navy">預約申請已成功送出！</h3>
+                <p class="text-xs sm:text-sm text-txt-muted max-w-md mx-auto leading-relaxed">
+                    感謝您的預約，飛炫將親自審視您的需求，並於 2 個工作天內透過 Email 或電話與您聯繫，確認後續診斷時間。
+                </p>
+                <button onclick="closeBookingModal()" class="px-6 py-2.5 bg-navy text-white text-xs font-bold rounded-full hover:bg-gold hover:text-navy transition-colors">
+                    關閉視窗
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Preview Modal -->
+    <div id="article-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-border">
+            <button onclick="closeArticleModal()" class="absolute top-5 right-5 text-txt-light hover:text-navy p-1">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="space-y-4">
+                <span class="text-xs font-bold text-gold-dark uppercase tracking-wider">INSIGHT PREVIEW</span>
+                <h3 class="text-xl font-bold text-navy" id="article-modal-title">觀點文章</h3>
+                <p class="text-xs sm:text-sm text-txt-muted leading-relaxed" id="article-modal-body">
+                    完整專欄文章內容撰寫中。喜願鳥持續分享品牌轉譯、視覺策略與企業官網建構的實戰心得。
+                </p>
+                <div class="pt-2">
+                    <button onclick="closeArticleModal(); openBookingModal();" class="w-full py-3 bg-navy text-white text-xs font-bold rounded-xl hover:bg-coral transition-colors">
+                        延伸討論：預約品牌診斷
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.remove('shadow-md');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function calculateBrandScore() {
+            const checkboxes = document.querySelectorAll('.quiz-check');
+            let count = 0;
+            checkboxes.forEach(cb => { if (cb.checked) count++; });
+
+            const scoreText = document.getElementById('score-text');
+            const scoreAdvice = document.getElementById('score-advice');
+
+            if (count === 0) {
+                scoreText.textContent = "請勾選符合的選項";
+                scoreAdvice.textContent = "透過線上快檢，協助您釐清是否需要透過正式「品牌診斷」來重新整理企業定位與溝通架構。";
+            } else if (count === 1) {
+                scoreText.textContent = "品牌健康度：良好（盲點指數 25%）";
+                scoreAdvice.textContent = "貴公司已有良好基礎，建議進行細節優化與顧客接觸點一致性檢查。";
+            } else if (count === 2) {
+                scoreText.textContent = "品牌健康度：中等（落差指數 50%）";
+                scoreAdvice.textContent = "存在部分溝通障礙與視覺不一致，建議透過「品牌診斷」釐清改善優先順序。";
+            } else {
+                scoreText.textContent = "品牌健康度：急需轉譯升級（落差指數 " + (count * 25) + "%）";
+                scoreAdvice.textContent = "企業極具專業，但市場無法感受到真正價值！強烈建議立即預約品牌診斷進行系統化清理。";
+            }
+        }
+
+        function openBookingModal(serviceName) {
+            const modal = document.getElementById('booking-modal');
+            const select = document.getElementById('selected-service-select');
+            if (serviceName && select) {
+                select.value = serviceName;
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.add('hidden');
+            setTimeout(() => {
+                document.getElementById('modal-form-content').classList.remove('hidden');
+                document.getElementById('modal-success-content').classList.add('hidden');
+            }, 300);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('modal-form-content').classList.add('hidden');
+            document.getElementById('modal-success-content').classList.remove('hidden');
+        }
+
+        function openArticleModal(title) {
+            document.getElementById('article-modal-title').textContent = title;
+            document.getElementById('article-modal').classList.remove('hidden');
+        }
+
+        function closeArticleModal() {
+            document.getElementById('article-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
