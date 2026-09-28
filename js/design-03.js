@@ -1,0 +1,299 @@
+window.PackageDemo = window.PackageDemo || {};
+window.PackageDemo.designs = window.PackageDemo.designs || {};
+window.PackageDemo.designs['design-03'] = {
+  "id": "design-03",
+  "label": "C 彩光幾何｜Prismatic Titanium",
+  "subtitle": "品牌基本款 Master Packaging",
+  "interiorColor": "#f5f1ee",
+  "source": "原始設計/包裝盒2.svg",
+  "units": "SVG source units; physical box dimensions are defined in js/config.js",
+  "parts": [
+    {
+      "id": "c",
+      "label": "開窗主面",
+      "sourceBounds": [
+        589.2,
+        317.76,
+        229.34,
+        341.42
+      ],
+      "parent": null,
+      "edge": null,
+      "angle": 0,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 0.8956319684455119,
+        "scaleY": 1,
+        "physicalWidth": 9,
+        "physicalHeight": 12
+      },
+      "artwork": "images/design-03/c.svg",
+      "interior": "images/design-03/c-inside.svg"
+    },
+    {
+      "id": "b",
+      "label": "開窗花紋側面",
+      "sourceBounds": [
+        362.66,
+        317.76,
+        226.54,
+        341.42
+      ],
+      "parent": "c",
+      "edge": "left",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 0.8846972448401772,
+        "scaleY": 1,
+        "physicalWidth": 9,
+        "physicalHeight": 12
+      },
+      "artwork": "images/design-03/b.svg",
+      "interior": "images/design-03/b-inside.svg"
+    },
+    {
+      "id": "a",
+      "label": "花朵背面",
+      "sourceBounds": [
+        135.41,
+        317.76,
+        227.25,
+        341.42
+      ],
+      "parent": "b",
+      "edge": "left",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 0.8874699783258156,
+        "scaleY": 1,
+        "physicalWidth": 9,
+        "physicalHeight": 12
+      },
+      "artwork": "images/design-03/a.svg",
+      "interior": "images/design-03/a-inside.svg"
+    },
+    {
+      "id": "d",
+      "label": "品牌側面",
+      "sourceBounds": [
+        818.54,
+        317.76,
+        228.12,
+        341.42
+      ],
+      "parent": "c",
+      "edge": "right",
+      "angle": 90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 0.8908675531603303,
+        "scaleY": 1,
+        "physicalWidth": 9,
+        "physicalHeight": 12
+      },
+      "artwork": "images/design-03/d.svg",
+      "interior": "images/design-03/d-inside.svg"
+    },
+    {
+      "id": "top",
+      "label": "上蓋",
+      "sourceBounds": [
+        589.2,
+        91.38,
+        229.34,
+        226.38
+      ],
+      "parent": "c",
+      "edge": "top",
+      "angle": 90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 0.9870933984477195,
+        "physicalWidth": 9,
+        "physicalHeight": 9
+      },
+      "artwork": "images/design-03/top.svg",
+      "interior": "images/design-03/top-inside.svg"
+    },
+    {
+      "id": "bottom",
+      "label": "下蓋",
+      "sourceBounds": [
+        589.2,
+        659.18,
+        229.34,
+        226.7
+      ],
+      "parent": "c",
+      "edge": "bottom",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 0.9884887067236416,
+        "physicalWidth": 9,
+        "physicalHeight": 9
+      },
+      "artwork": "images/design-03/bottom.svg",
+      "interior": "images/design-03/bottom-inside.svg"
+    },
+    {
+      "id": "topTab",
+      "label": "上插舌",
+      "sourceBounds": [
+        589.2,
+        50.64,
+        229.34,
+        40.74
+      ],
+      "parent": "top",
+      "edge": "top",
+      "angle": 90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 1,
+        "physicalWidth": 9,
+        "physicalHeight": 1.5987616639051192
+      },
+      "artwork": "images/design-03/topTab.svg",
+      "interior": "images/design-03/topTab-inside.svg"
+    },
+    {
+      "id": "bottomTab",
+      "label": "下插舌",
+      "sourceBounds": [
+        589.2,
+        885.88,
+        229.34,
+        36.61
+      ],
+      "parent": "bottom",
+      "edge": "bottom",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 1,
+        "physicalWidth": 9,
+        "physicalHeight": 1.4366878869800297
+      },
+      "artwork": "images/design-03/bottomTab.svg",
+      "interior": "images/design-03/bottomTab-inside.svg"
+    },
+    {
+      "id": "bTop",
+      "label": "左上防塵翼",
+      "sourceBounds": [
+        362.66,
+        225.45,
+        226.54,
+        92.31
+      ],
+      "parent": "b",
+      "edge": "top",
+      "angle": 90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 1,
+        "physicalWidth": 8.890119473271126,
+        "physicalHeight": 3.622525507979419
+      },
+      "artwork": "images/design-03/bTop.svg",
+      "interior": "images/design-03/bTop-inside.svg"
+    },
+    {
+      "id": "dTop",
+      "label": "右上防塵翼",
+      "sourceBounds": [
+        818.54,
+        225.38,
+        228.12,
+        92.38
+      ],
+      "parent": "d",
+      "edge": "top",
+      "angle": 90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 1,
+        "physicalWidth": 8.952123484782419,
+        "physicalHeight": 3.625272521147641
+      },
+      "artwork": "images/design-03/dTop.svg",
+      "interior": "images/design-03/dTop-inside.svg"
+    },
+    {
+      "id": "bBottom",
+      "label": "左下防塵翼",
+      "sourceBounds": [
+        362.66,
+        659.18,
+        226.54,
+        92.57
+      ],
+      "parent": "b",
+      "edge": "bottom",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 1,
+        "physicalWidth": 8.890119473271126,
+        "physicalHeight": 3.6327286997471
+      },
+      "artwork": "images/design-03/bBottom.svg",
+      "interior": "images/design-03/bBottom-inside.svg"
+    },
+    {
+      "id": "dBottom",
+      "label": "右下防塵翼",
+      "sourceBounds": [
+        818.54,
+        659.18,
+        228.12,
+        92.57
+      ],
+      "parent": "d",
+      "edge": "bottom",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 1,
+        "scaleY": 1,
+        "physicalWidth": 8.952123484782419,
+        "physicalHeight": 3.6327286997471
+      },
+      "artwork": "images/design-03/dBottom.svg",
+      "interior": "images/design-03/dBottom-inside.svg"
+    },
+    {
+      "id": "glue",
+      "label": "黏貼邊",
+      "sourceBounds": [
+        104.66,
+        317.76,
+        30.75,
+        341.42
+      ],
+      "parent": "a",
+      "edge": "left",
+      "angle": -90,
+      "artworkFit": {
+        "mode": "uniform-decoration-fit",
+        "scaleX": 0.8956319684455119,
+        "scaleY": 1,
+        "physicalWidth": 1.2067236417546001,
+        "physicalHeight": 12
+      },
+      "artwork": "images/design-03/glue.svg",
+      "interior": "images/design-03/glue-inside.svg"
+    }
+  ]
+};
+window.PackageDemo.design = window.PackageDemo.design || window.PackageDemo.designs['design-03'];
