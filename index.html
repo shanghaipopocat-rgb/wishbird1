@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>MonChic 慕時尚包裝提案</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="toolbar">
+      <div class="brand-block">
+        <span class="eyebrow">MONCHIC PACKAGING LAB</span>
+        <h1>MonChic 慕時尚包裝提案</h1>
+        <span id="designLabel" class="dimension-badge">A 都會鈦感｜願你・閃耀 · 包裝盒1.svg · 9 × 9 × 12 cm</span>
+        <span id="designSubtitle" class="design-subtitle">Urban Titanium｜SHINE YOUR WAY</span>
+      </div>
+      <div class="toolbar-actions" aria-label="展示控制">
+        <button id="flatButton" class="control-button" type="button">展開</button>
+        <button id="assembleButton" class="control-button primary" type="button">組裝</button>
+        <button id="autoRotateButton" class="control-button" type="button" aria-pressed="false">自動旋轉</button>
+        <button id="resetButton" class="icon-button" type="button" title="恢復正面" aria-label="恢復正面">↺</button>
+      </div>
+    </header>
+
+    <nav class="design-tabs" role="tablist" aria-label="包裝樣式">
+      <button id="tab-design-02" class="design-tab" role="tab" type="button" data-design="design-02" aria-selected="true" aria-controls="designViewer" tabindex="0"><span class="swatch blue"></span><span>A 都會鈦感｜願你・閃耀<span class="tab-file">Urban Titanium｜SHINE YOUR WAY</span></span></button>
+      <button id="tab-design-01" class="design-tab" role="tab" type="button" data-design="design-01" aria-selected="false" aria-controls="designViewer" tabindex="-1"><span class="swatch purple"></span><span>B 彩鈦時尚｜為你・綻放<span class="tab-file">Titanium Chic｜BLOOM FOR YOU</span></span></button>
+      <button id="tab-design-03" class="design-tab" role="tab" type="button" data-design="design-03" aria-selected="false" aria-controls="designViewer" tabindex="-1"><span class="swatch floral"></span><span>C 彩光幾何｜Prismatic Titanium<span class="tab-file">品牌基本款 Master Packaging</span></span></button>
+    </nav>
+    <section id="designViewer" class="viewer-card" role="tabpanel" aria-labelledby="tab-design-02">
+      <div class="mode-strip" aria-live="polite">
+        <span id="modeLabel">3D 模式</span>
+        <span class="separator">/</span>
+        <span id="progressLabel">組裝 100%</span>
+      </div>
+
+      <div id="viewport" class="viewport" tabindex="0" aria-label="可旋轉的 3D 包裝盒展示">
+        <div class="ground-shadow" aria-hidden="true"></div>
+        <div id="camera" class="camera">
+          <div id="boxRoot" class="box-root"></div>
+        </div>
+        <div class="drag-hint" aria-hidden="true">拖曳旋轉 · 滾輪縮放</div>
+      </div>
+
+      <footer class="viewer-footer">
+        <div class="legend">
+          <span><kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> 旋轉</span>
+          <span><kbd>R</kbd> 復位</span>
+          <span><kbd>A</kbd> 自動旋轉</span>
+        </div>
+        <div class="material-note">金色蛋杯 · 杯口 Ø6／高 9／底部 Ø3 cm · 離線可用</div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/design-02.js"></script>
+  <script src="js/design-01.js"></script>
+  <script src="js/design-03.js"></script>
+  <script src="js/cup-model.js"></script>
+  <script src="js/box-model.js"></script>
+  <script src="js/interaction.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
