@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225 281">
+  <defs>
+    <clipPath id="cupClip">
+      <path d="M21 7 C18 24 18 45 23 67 C31 108 51 157 72 181 C83 194 91 203 95 216 L95 246 C95 254 78 258 66 263 L66 274 L159 274 L159 263 C147 258 130 254 130 246 L130 216 C134 203 142 194 153 181 C174 157 194 108 202 67 C207 45 207 24 204 7 Z"/>
+    </clipPath>
+    <linearGradient id="glassGlow" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".28"/>
+      <stop offset=".42" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".18"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#cupClip)">
+    <image href="product-cup.jpg" x="0" y="0" width="225" height="281" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="20" y="5" width="185" height="270" fill="url(#glassGlow)"/>
+  </g>
+  <path d="M21 7 C18 24 18 45 23 67 C31 108 51 157 72 181 C83 194 91 203 95 216 L95 246 C95 254 78 258 66 263 M204 7 C207 24 207 45 202 67 C194 108 174 157 153 181 C142 194 134 203 130 216 L130 246 C130 254 147 258 159 263" fill="none" stroke="#d6aa51" stroke-opacity=".5" stroke-width="2"/>
+</svg>
